@@ -32,7 +32,7 @@
             var cameras = {
                 "list": [],
                 "selectCamera": function (id) {
-                    for (let camera of list) {
+                    for (let camera of this.list) {
                         if (camera.id === id) {
                             return camera;
                         }

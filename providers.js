@@ -73,7 +73,7 @@ var providers = {
 
 
     "selectProvider": function (id) {
-        for (let provider of list) {
+        for (let provider of this.list) {
             if (provider.id === id) {
                 return provider;
             }
@@ -83,7 +83,7 @@ var providers = {
 
 
     "selectStream": function (id, name) {
-        for (let stream of selectProvider(id).streams) {
+        for (let stream of this.selectProvider(id).streams) {
             if (stream.name === name) {
                 return stream;
             }
@@ -93,7 +93,7 @@ var providers = {
 
 
     "selectSource": function (id, name, protocol) {
-        for (let source of selectStream(id, name)) {
+        for (let source of this.selectStream(id, name)) {
             if (source.protocol === protocol) {
                 return source;
             }
