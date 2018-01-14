@@ -41,7 +41,7 @@
                 },
                 "getStream": function (id, stream, protocol) {
                     var source = id;
-                    var cam = selectCamera(id);
+                    var cam = this.selectCamera(id);
                     if (stream === "live") {
                         source = cam.stream;
                     }
