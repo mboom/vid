@@ -14,7 +14,7 @@
 
         <script>
             var cameras = {
-                "list": [],
+                "list": []/*,
                 "selectCamera": function (id) {
                     for (let camera of list) {
                         if (camera.id === id) {
@@ -30,7 +30,7 @@
                         source = cam.stream;
                     }
                     return providers.selectSource(cam.provider, "static", "image").location(source);
-                }
+                }*/
             };
             $.getJSON("cameras.json", function (data) {
                 cameras.list = data;
@@ -39,7 +39,7 @@
 
 
 
-        <script>
+        <!--<script>
             var cctv = {
                 addLive: function (src) {
                     $("body").append("<video autoplay='' controls='' data-dashjs-player='' src='" + src + "'></video>");
@@ -56,7 +56,7 @@
                 }
             }
             $("body").append("<script>testCCTV();</script>");
-        </script>
+        </script>-->
         
 
 
