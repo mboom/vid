@@ -1,0 +1,24 @@
+{
+    "name": "vid",
+    "version": "0.0.0",
+    "description": "Overzicht van VID-Trafficcams van VID Nederland B.V.",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/mboom/vid.git"
+    },
+    "keywords": [
+      "vid",
+      "cam"
+    ],
+    "author": "Marco Boom",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/mboom/vid/issues"
+    },
+    "homepage": "https://github.com/mboom/vid#readme"
+  }
+  

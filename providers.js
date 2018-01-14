@@ -1,65 +1,103 @@
-"providers" = [
-    {
-        "id": "VID Nederland B.V.",
-        "streams": [
-            {
-                "name": "static",
-                "sources": [
-                    {
-                        "protocols": "image",
-                        "format": "PNG",
-                        "location": function (cam) {
-                            return "https://vid.nl/ImageCamera/cam_" + cam + "?dummy=" + (new Date).getTime().toString(10);
+var providers = {
+    "list": [
+        {
+            "id": "VID Nederland B.V.",
+            "streams": [
+                {
+                    "name": "static",
+                    "sources": [
+                        {
+                            "protocols": "image",
+                            "format": "PNG",
+                            "location": function (cam) {
+                                return "https://vid.nl/ImageCamera/cam_" + cam
+                                  + "?dummy=" + (new Date).getTime().toString(10);
+                            }
                         }
-                    }
-                ]
-            },
-            {
-                "name": "live",
-                "sources": [
-                    {
-                        "protocol": "MPEG-DASH Media Presentation Description",
-                        "format": "XML",
-                        "location": function (stream) {
-                            return "https://stream.vid.nl:1935/rtplive/" + stream + ".stream/manifest.mpd";
+                    ]
+                },
+                {
+                    "name": "live",
+                    "sources": [
+                        {
+                            "protocol": "MPEG-DASH Media Presentation Description",
+                            "format": "XML",
+                            "location": function (stream) {
+                                return "https://stream.vid.nl:1935/rtplive/"
+                                  + stream + ".stream/manifest.mpd";
+                            }
+                        },
+                        {
+                            "protocol": "HTTP Live Streaming",
+                            "format": "M3U8",
+                            "location": function (stream) {
+                                return "https://stream.vid.nl:1935/rtplive/"
+                                  + stream + ".stream/playlist.m3u8";
+                            }
+                        },
+                        {
+                            "protocol": "Real Time Streaming Protocol",
+                            "format": "M3U8",
+                            "location": function (stream) {
+                                return "https://stream.vid.nl:1935/rtplive/"
+                                  + stream + ".stream/playlist.m3u8";
+                            }
                         }
-                    },
-                    {
-                        "protocol": "HTTP Live Streaming",
-                        "format": "M3U8",
-                        "location": function (stream) {
-                            return "https://stream.vid.nl:1935/rtplive/" + stream + ".stream/playlist.m3u8";
+                    ]
+                }
+            ]
+        },
+
+
+
+        {
+            "id": "N.V. Nederlandse Apparatenfabriek Nedap",
+            "streams": [
+                {
+                    "name": "static",
+                    "sources": [
+                        {
+                            "protocol": "image",
+                            "format": "JPG",
+                            "location": function (cam) {
+                                return "http://www.nedapstadstoegang.net/cameraoverzicht_almelo/images/"
+                                  + cam + ".jpg?id=" + (new Date).valueOf();
+                            }
                         }
-                    },
-                    {
-                        "protocol": "Real Time Streaming Protocol",
-                        "format": "M3U8",
-                        "location": function (stream) {
-                            return "https://stream.vid.nl:1935/rtplive/" + stream + ".stream/playlist.m3u8";
-                        }
-                    }
-                ]
+                    ]
+                }
+            ]
+        }
+    ],
+
+
+
+    "selectProvider": function (id) {
+        for (let provider of list) {
+            if (provider.id === id) {
+                return provider;
             }
-        ]
+        }
+        throw new Error("id not found");
     },
 
 
-
-    {
-        "id": "N.V. Nederlandse Apparatenfabriek Nedap",
-        "streams": [
-            {
-                "name": "static",
-                "sources": [
-                    {
-                        "protocol": "image",
-                        "format": "JPG",
-                        "location": function (cam) {
-                            return "http://www.nedapstadstoegang.net/cameraoverzicht_almelo/images/" + cam + ".jpg?id=" + (new Date).valueOf();
-                        }
-                    }
-                ]
+    "selectStream": function (id, name) {
+        for (let stream of selectProvider(id).streams) {
+            if (stream.name === name) {
+                return stream;
             }
-        ]
+        }
+        throw new Error("name not found");
+    },
+
+
+    "selectSource": function (id, name, protocol) {
+        for (let source of selectStream(id, name)) {
+            if (source.protocol === protocol) {
+                return source;
+            }
+        }
+        throw new Error("protocol not found");
     }
-];
+};

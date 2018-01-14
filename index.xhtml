@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nl" lang="nl">
+    <head>
+        <script
+          src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+          integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+          crossorigin="anonymous"></script>
+        <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+        <script src="providers.js"></script>
+
+        <script>
+            var cameras = {
+                "list": [],
+                "selectCamera": function (id) {
+                    for (let camera of list) {
+                        if (camera.id === id) {
+                            return camera;
+                        }
+                    }
+                    throw new Error("camera not found");
+                }
+            };
+            $.getJSON("cameras.json", function (data) {
+                cameras.list = data;
+            });
+        </script>
+        
+        <style>
+            video {
+                height: 360px;
+                width: 640px;
+            }
+        </style>
+        <title>Overview</title>
+    </head>
+
+
+    <body>
+        <video autoplay="" controls="" data-dashjs-player=""
+          src="https://dash.akamaized.net/envivio/EnvivioDash3/manifest.mpd"></video>
+    </body>
+</html>
