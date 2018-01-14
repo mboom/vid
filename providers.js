@@ -93,7 +93,7 @@ var providers = {
 
 
     "selectSource": function (id, name, protocol) {
-        for (let source of this.selectStream(id, name)) {
+        for (let source of this.selectStream(id, name).sources) {
             if (source.protocol === protocol) {
                 return source;
             }
