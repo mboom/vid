@@ -21,7 +21,8 @@
     },
     "homepage": "https://github.com/mboom/vid#readme",
     "dependencies": {
-      "express": ""
+      "express": "",
+      "path": ""
     }
   }
   
