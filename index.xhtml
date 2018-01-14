@@ -22,7 +22,7 @@
                         }
                     }
                     throw new Error("camera not found");
-                }/*,
+                },
                 "getStream": function (id, stream, protocol) {
                     var source = id;
                     var cam = selectCamera(id);
@@ -30,7 +30,7 @@
                         source = cam.stream;
                     }
                     return providers.selectSource(cam.provider, "static", "image").location(source);
-                }*/
+                }
             };
             $.getJSON("cameras.json", function (data) {
                 cameras.list = data;
