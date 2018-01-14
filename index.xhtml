@@ -13,7 +13,7 @@
 
 
         <script>
-            /*var cameras = {
+            var cameras = {
                 "list": [],
                 "selectCamera": function (id) {
                     for (let camera of list) {
@@ -31,13 +31,15 @@
                     }
                     return providers.selectSource(cam.provider, "static", "image").location(source);
                 }
-            };*/
-            /*$.getJSON("cameras.json", function (data) {
+            };
+            $.getJSON("cameras.json", function (data) {
                 cameras.list = data;
             });
+        </script>
 
 
-            
+        
+        <!--<script>
             var cctv = {
                 addLive: function (src) {
                     $("body").append("<video autoplay='' controls='' data-dashjs-player='' src='" + src + "'></video>");
@@ -45,8 +47,8 @@
                 addStatic: function (src) {
                     $("body").append("<img src='" + src + "'/>");
                 }
-            };*/
-        </script>
+            };
+        </script>-->
 
 
 
