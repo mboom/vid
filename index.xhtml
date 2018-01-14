@@ -12,7 +12,7 @@
 
 
 
-        <!--<script>
+        <script>
             var cameras = {
                 "list": [],
                 "selectCamera": function (id) {
@@ -32,7 +32,7 @@
                     return providers.selectSource(cam.provider, "static", "image").location(source);
                 }
             };
-            $.getJSON("cameras.json", function (data) {
+            /*$.getJSON("cameras.json", function (data) {
                 cameras.list = data;
             });
 
@@ -45,12 +45,12 @@
                 addStatic: function (src) {
                     $("body").append("<img src='" + src + "'/>");
                 }
-            };
+            };*/
         </script>
 
 
 
-        <script>
+        <!--<script>
             function testCCTV() {
                 for (let i = 0; i < 5; ++i) {
                     cctv.addLive(cameras.getStream(cameras.list[i].id));
