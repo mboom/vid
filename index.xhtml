@@ -35,11 +35,9 @@
             $.getJSON("cameras.json", function (data) {
                 cameras.list = data;
             });
-        </script>
 
 
-
-        <!--<script>
+            
             var cctv = {
                 addLive: function (src) {
                     $("body").append("<video autoplay='' controls='' data-dashjs-player='' src='" + src + "'></video>");
@@ -48,8 +46,11 @@
                     $("body").append("<img src='" + src + "'/>");
                 }
             };
+        </script>
 
 
+
+        <!--<script>
             function testCCTV() {
                 for (let i = 0; i < 5; ++i) {
                     cctv.addLive(cameras.getStream(cameras.list[i].id));
