@@ -24,48 +24,50 @@
   
 
         <script>
-            var cameras = {
-                "list": [],
+            //<![CDATA[
+                var cameras = {
+                    "list": [],
 
 
-                "selectCamera": function (id) {
-                    for (let camera of this.list) {
-                        if (camera.id === id) {
-                            return camera;
+                    "selectCamera": function (id) {
+                        for (let camera of this.list) {
+                            if (camera.id === id) {
+                                return camera;
+                            }
                         }
+                        throw new Error("camera not found");
+                    },
+
+
+                    "checkStream": function (id, stream) {
+                        var cam = this.selectCamera(id);
+                        if (stream === "live" && (typeof cam.stream === "undefined" || cam.stream === "")) {
+                            return false;
+                        }
+                        return providers.checkStream(cam.provider, stream);
+                    },
+
+
+                    "checkSource": function (id, stream, protocol) {
+                        return this.checkStream(id, stream) && providers.checkSource(this.selectCamera(id).provider, stream, protocol);
+                    },
+
+
+                    "getStream": function (id, stream, protocol) {
+                        var source = id;
+                        var cam = this.selectCamera(id);
+                        if (stream === "live") {
+                            source = cam.stream;
+                        }
+                        return providers.selectSource(cam.provider, stream, protocol).location(source);
                     }
-                    throw new Error("camera not found");
-                },
+                };
 
 
-                "checkStream": function (id, stream) {
-                    var cam = this.selectCamera(id);
-                    if (stream === "live" && (typeof cam.stream === "undefined" || cam.stream === "")) {
-                        return false;
-                    }
-                    return providers.checkStream(cam.provider, stream);
-                },
-
-
-                "checkSource": function (id, stream, protocol) {
-                    return this.checkStream(id, stream) && providers.checkSource(this.selectCamera(id).provider, stream, protocol);
-                },
-
-
-                "getStream": function (id, stream, protocol) {
-                    var source = id;
-                    var cam = this.selectCamera(id);
-                    if (stream === "live") {
-                        source = cam.stream;
-                    }
-                    return providers.selectSource(cam.provider, stream, protocol).location(source);
-                }
-            };
-
-
-            $.getJSON("cameras.json", function (data) {
-                cameras.list = data;
-            });
+                $.getJSON("cameras.json", function (data) {
+                    cameras.list = data;
+                });
+            //]]>
         </script>
 
   
@@ -102,7 +104,7 @@
   
   
         <script>
-            <![CDATA[
+            //<![CDATA[
                 function testCCTV() {
                     for (var i = 0; i < 5; ++i) {
                         cctv.addLive(cameras.getStream(cameras.list[i].id, "live", "HTTP Live Streaming"));
@@ -114,7 +116,7 @@
                         cctv.addCamera(camera.id);
                     }
                 }
-            ]]>
+            //]]>
         </script>
     </body>
 </html>
