@@ -114,7 +114,7 @@ var providers = {
 
 
     "checkStream": function (id, name) {
-        if (this.checkProvider(id)) {
+        if (!this.checkProvider(id)) {
             return false;
         }
 
@@ -129,7 +129,7 @@ var providers = {
 
 
     "checkSource": function (id, name, protocol) {
-        if (this.checkStream(id, name)) {
+        if (!this.checkStream(id, name)) {
             return false;
         }
 
