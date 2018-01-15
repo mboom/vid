@@ -45,7 +45,7 @@
                     if (stream === "live") {
                         source = cam.stream;
                     }
-                    return providers.selectSource(cam.provider, "static", "image").location(source);
+                    return providers.selectSource(cam.provider, stream, protocol).location(source);
                 }
             };
             $.getJSON("cameras.json", function (data) {

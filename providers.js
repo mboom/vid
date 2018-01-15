@@ -74,6 +74,8 @@ var providers = {
 
     "selectProvider": function (id) {
         for (let provider of this.list) {
+            console.log(provider.id);
+            console.log(id);
             if (provider.id === id) {
                 return provider;
             }
@@ -84,6 +86,8 @@ var providers = {
 
     "selectStream": function (id, name) {
         for (let stream of this.selectProvider(id).streams) {
+            console.log(stream.name);
+            console.log(name);
             if (stream.name === name) {
                 return stream;
             }
@@ -94,6 +98,8 @@ var providers = {
 
     "selectSource": function (id, name, protocol) {
         for (let source of this.selectStream(id, name).sources) {
+            console.log(source);
+            console.log(source.protocol);
             if (source.protocol === protocol) {
                 return source;
             }
