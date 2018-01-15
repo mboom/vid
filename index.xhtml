@@ -86,10 +86,10 @@
 
 
                 addCamera: function (id) {
-                    if (cameras.checkSource(id, "live", "HTTP Live Streaming")) {
+                    if (cameras.checkSource(id, "live", "HTTP Live Streaming") === true) {
                         cctv.addLive(cameras.getStream(id, "live", "HTTP Live Streaming"));
                     } else if (cameras.checkSource(id, "static", "image")) {
-                        cctv.addStatic(cameras.getStream(id, "static", "image"));
+                        cctv.addStatic(cameras.getStream(id, "static", "image") === true);
                     }
                 }
             };
