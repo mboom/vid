@@ -26,6 +26,8 @@
         <script>
             var cameras = {
                 "list": [],
+
+
                 "selectCamera": function (id) {
                     for (let camera of this.list) {
                         if (camera.id === id) {
@@ -34,6 +36,18 @@
                     }
                     throw new Error("camera not found");
                 },
+
+
+                "checkStream": function (id, stream) {
+                    return providers.checkStream(this.selectCamera(id).provider, stream);
+                },
+
+
+                "checkSource": function (id, stream, protocol) {
+                    return providers.checkSource(this.selectCamera(id).provider, stream, protocol);
+                },
+
+
                 "getStream": function (id, stream, protocol) {
                     var source = id;
                     var cam = this.selectCamera(id);
@@ -43,6 +57,8 @@
                     return providers.selectSource(cam.provider, stream, protocol).location(source);
                 }
             };
+
+
             $.getJSON("cameras.json", function (data) {
                 cameras.list = data;
             });
@@ -60,10 +76,21 @@
                     video.setAttribute("src", src);
                     document.querySelector("body").appendChild(video);
                 },
+
+
                 addStatic: function (src) {
                     var img = document.createElement("img");
                     img.setAttribute("src", src);
                     document.querySelector("body").appendChild(img);
+                },
+
+
+                addCamera: function (id) {
+                    if (cameras.checkSource(id, "live", "HTTP Live Streaming")) {
+                        cctv.addLive(cameras.getStream(id, "live", "HTTP Live Streaming"));
+                    } else if (cameras.checkSource(id, "static", "image")) {
+                        cctv.addStatic(cameras.getStream(id, "static", "image"));
+                    }
                 }
             };
         </script>
@@ -74,7 +101,13 @@
             <![CDATA[
                 function testCCTV() {
                     for (var i = 0; i < 5; ++i) {
-                        cctv.addLive(cameras.getStream(cameras.list[i].id, "live", "HTTP Live Streaming"))
+                        cctv.addLive(cameras.getStream(cameras.list[i].id, "live", "HTTP Live Streaming"));
+                    }
+                }
+
+                function loadAll() {
+                    for (let camera of cameras.list) {
+                        cctv.addCamera(camera.id);
                     }
                 }
             ]]>

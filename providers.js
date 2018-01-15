@@ -99,5 +99,46 @@ var providers = {
             }
         }
         throw new Error("protocol not found");
+    },
+
+
+    "checkProvider": function (id) {
+        for (let provider of this.list) {
+            if (provider.id === id) {
+                return true;
+            }
+        }
+
+        return false;
+    },
+
+
+    "checkStream": function (id, name) {
+        if (!this.checkProvider(id)) {
+            return false;
+        }
+
+        for (let stream of this.selectProvider(id).streams) {
+            if (stream.name === name) {
+                return true;
+            }
+        }
+
+        return false;
+    },
+
+
+    "checkSource": function (id, name, protocol) {
+        if (!this.checkStream(id, name)) {
+            return false;
+        }
+
+        for (let source of this.selectStream(id, name).sources) {
+            if (source.protocol === protocol) {
+                return true;
+            }
+        }
+
+        return false;
     }
 };
