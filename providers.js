@@ -7,7 +7,7 @@ var providers = {
                     "name": "static",
                     "sources": [
                         {
-                            "protocols": "image",
+                            "protocol": "image",
                             "format": "PNG",
                             "location": function (cam) {
                                 return "https://vid.nl/ImageCamera/cam_" + cam
