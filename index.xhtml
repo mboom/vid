@@ -86,7 +86,14 @@
 
                 addStatic: function (src) {
                     var img = document.createElement("img");
-                    img.setAttribute("src", src);
+                    img.setAttribute("src", src());
+
+                    var reload = function () {
+                        setTimeout(reload, 2000);
+                        img.setAttribute("src", src());
+                    }
+                    img.addEventListener("load", reload);
+
                     document.querySelector("body").appendChild(img);
                 },
 
@@ -95,7 +102,7 @@
                     if (cameras.checkSource(id, "live", "HTTP Live Streaming")) {
                         cctv.addLive(cameras.getStream(id, "live", "HTTP Live Streaming"));
                     } else if (cameras.checkSource(id, "static", "image")) {
-                        cctv.addStatic(cameras.getStream(id, "static", "image"));
+                        cctv.addStatic(function () { return cameras.getStream(id, "static", "image"); });
                     }
                 }
             };
