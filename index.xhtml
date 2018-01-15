@@ -112,15 +112,15 @@
 
                 addCamera: function (id) {
                     if (cameras.checkSource(id, "live", "HTTP Live Streaming")) {
-                        cctv.addLive(cameras.getStream(id, "live", "HTTP Live Streaming"));
+                        this.addLive(cameras.getStream(id, "live", "HTTP Live Streaming"));
                     } else if (cameras.checkSource(id, "static", "image")) {
-                        cctv.addStatic(function () { return cameras.getStream(id, "static", "image"); });
+                        this.addStatic(function () { return cameras.getStream(id, "static", "image"); });
                     }
                 },
 
                 addList: function (list) {
                     for (camera of list) {
-                        addCamera(camera.id);
+                        this.addCamera(camera.id);
                     }
                 }
             };
