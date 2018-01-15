@@ -3,169 +3,197 @@
         "id": "3",
         "description": "A10 t.h.v. knooppunt Coenplein Noord, Camera knp. Coenplein (A8, A10)",
         "stream": "IB_19",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "VID Nederland B.V."
     },
     {
         "id": "5",
         "description": "A10 t.h.v. knooppunt Amstel, Camera knp. Amstel (A2, A10)",
         "stream": "IB_100",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "VID Nederland B.V."
     },
     {
         "id": "6",
         "description": "A2 bij Zaltbommel, A2 Utrecht - Den Bosch, Camera Zaltbommel (A2)",
         "stream": "IB_26",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "VID Nederland B.V."
     },
     {
         "id": "11",
         "description": "A12 t.h.v. knooppunt Gouwe, A12 knooppunt Gouwe, Camera knp. Gouwe (A12, A20)",
         "stream": "IB_13",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "VID Nederland B.V."
     },
     {
         "id": "12",
         "description": "A4 t.h.v. Roelofarendsveen, Camera Roelofarendsveen (A4)",
         "stream": "IB_64",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "VID Nederland B.V."
     },
     {
         "id": "13",
         "description": "A16 t.h.v. Zwijndrecht, Camera Zwijndrecht (A16)",
         "stream": "IB_41",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "VID Nederland B.V."
     },
     {
         "id": "14",
         "description": "A10 t.h.v. aansluiting S107, Camera knp. De Nieuwe Meer (A10)",
         "stream": "IB_25",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "VID Nederland B.V."
     },
     {
         "id": "15",
         "description": "A27 t.h.v. Gorinchem, Camera Gorinchem (A27)",
         "stream": "IB_22a",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "VID Nederland B.V."
     },
     {
         "id": "18",
         "description": "A4 t.h.v. Amsterdam-Sloten, Camera Sloten (A4)",
         "stream": "IB_94",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "VID Nederland B.V."
     },
     {
         "id": "19",
         "description": "A4 t.h.v. knp. De Hoek, Camera knp. De Hoek (A4, A5)",
         "stream": "IB_92",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "VID Nederland B.V."
     },
     {
         "id": "27",
         "description": "A2 t.h.v. Vianen, Camera Vianen (A2)",
         "stream": "IB_69",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "VID Nederland B.V."
     },
     {
         "id": "34",
         "description": "A9 t.h.v. Amstelveen, Camera Amstelveen (A9)",
         "stream": "IB_207",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "VID Nederland B.V."
     },
     {
         "id": "36",
         "description": "A9 t.h.v. knooppunt Holendrecht, Camera knp. Holendrecht (A2, A9)",
         "stream": "IB_14",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "VID Nederland B.V."
     },
     {
         "id": "39",
         "description": "A4 t.h.v. Vlaardingen, Camera Vlaardingen (A4)",
         "stream": "IB_70",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "VID Nederland B.V."
     },
     {
         "id": "40",
         "description": "A13 t.h.v. Delft, Camera Delft (A13)",
         "stream": "IB_20",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "VID Nederland B.V."
     },
     {
         "id": "41",
         "description": "A10 t.h.v. knooppunt Westpoort, A5/A10 knooppunt Westpoort, Camera Westpoort (A10)",
         "stream": "IB_16",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "VID Nederland B.V."
     },
     {
         "id": "45",
         "description": "A16 t.h.v. de Van Brienenoordbrug, Camera Van Brienenoordbrug (A16)",
         "stream": "IB_205",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "VID Nederland B.V."
     },
     {
         "id": "46",
         "description": "A12 t.h.v. Oudenrijn, Camera Oudenrijn (A12)",
         "stream": "IB_201",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "VID Nederland B.V."
     },
     {
         "id": "61",
         "description": "A10 t.h.v. knooppunt Watergraafsmeer, A10 knooppunt Watergraafsmeer, Camera knp. Watergraafsmeer (A10)",
         "stream": "IB_33",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "VID Nederland B.V."
     },
     {
         "id": "62",
         "description": "A1 t.h.v. Amersfoort, Camera Amersfoort (A1)",
         "stream": "IB_55",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "VID Nederland B.V."
     },
     {
         "id": "86",
         "description": "A20 t.h.v. Rotterdam Spaanse Polder, A20 Spaanse Polder, Camera Spaanse Polder (A20)",
         "stream": "IB_43",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "VID Nederland B.V."
     },
     {
         "id": "87",
         "description": "A9 t.h.v. knooppunt Rottepolderplein, A9 / A200 knooppunt Rottepolderplein, Camera Rottepolderplein (A9)",
         "stream": "IB_45",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "VID Nederland B.V."
     },
     {
         "id": "107",
         "description": "A12 t.h.v. Hoograven, A12 / Waterlinieweg / Knp Lunetten A27, Camera Hoograven (A12)",
         "stream": "IB_91",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "VID Nederland B.V."
     },
     {
         "id": "108",
         "description": "A4 t.h.v. Leiden, A4 t.h.v. N11, Camera Leiden (A4)",
         "stream": "IB_28",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "VID Nederland B.V."
     },
     {
         "id": "114",
         "description": "Driebergen-Zeist 2, Driebergenseweg",
         "stream": "",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "VID Nederland B.V."
     },
     {
         "id": "118",
         "description": "A6 t.h.v. Almere-stad, Camera Almere-Stad (A6)",
         "stream": "IB_37",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "VID Nederland B.V."
     },
     {
         "id": "119",
         "description": "A9 t.h.v. Diemen, Camera t.h.v. Diemen (A9)",
         "stream": "IB_231",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "VID Nederland B.V."
     },
     {
         "id": "121",
         "description": "A16 t.h.v. Dordrecht, Camera t.h.v. Dordrecht (A16)",
         "stream": "IB_50",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "VID Nederland B.V."
     },
 
 
@@ -174,163 +202,190 @@
         "id": "126",
         "description": "Droogleever Fortuijnplein",
         "stream": "GRT_01",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Gemeente Rotterdam"
     },
     {
         "id": "128",
         "description": "'s-Gravendijkwal - Rochussenstraat",
         "stream": "GRT_02",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Gemeente Rotterdam"
     },
     {
         "id": "129",
         "description": "'s-Gravendijkwal - 1e Middellandstraat",
         "stream": "GRT_03",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Gemeente Rotterdam"
     },
     {
         "id": "130",
         "description": "Westzeedijk - Pieter de Hoochweg",
         "stream": "GRT_04",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Gemeente Rotterdam"
     },
     {
         "id": "131",
         "description": "Westzeedijk - Vasteland",
         "stream": "GRT_05",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Gemeente Rotterdam"
     },
     {
         "id": "132",
         "description": "Erasmusbrug - Wilhelminaplein",
         "stream": "GRT_06",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Gemeente Rotterdam"
     },
     {
         "id": "133",
         "description": "Posthumalaan",
         "stream": "GRT_07",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Gemeente Rotterdam"
     },
     {
         "id": "134",
         "description": "Maashaven Oostzijde - Hillelaan",
         "stream": "GRT_08",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Gemeente Rotterdam"
     },
     {
         "id": "135",
         "description": "Maastunnelplein",
         "stream": "GRT_09",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Gemeente Rotterdam"
     },
     {
         "id": "136",
         "description": "Strevelsweg - Zuidplein",
         "stream": "GRT_10",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Gemeente Rotterdam"
     },
     {
         "id": "137",
         "description": "Strevelsweg - Zuiderparkweg",
         "stream": "GRT_11",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Gemeente Rotterdam"
     },
     {
         "id": "138",
         "description": "Boompjes - Willemsbrug",
         "stream": "GRT_12",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Gemeente Rotterdam"
     },
     {
         "id": "139",
         "description": "Boompjes - Erasmusbrug",
         "stream": "GRT_13",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Gemeente Rotterdam"
     },
     {
         "id": "140",
         "description": "Laan op Zuid",
         "stream": "GRT_14",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Gemeente Rotterdam"
     },
     {
         "id": "141",
         "description": "Stadionrotonde",
         "stream": "GRT_15",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Gemeente Rotterdam"
     },
     {
         "id": "142",
         "description": "Abram van Rijckevorselweg - Maasboulevard",
         "stream": "GRT_16",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Gemeente Rotterdam"
     },
     {
         "id": "143",
         "description": "Kralingseplein",
         "stream": "GRT_17",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Gemeente Rotterdam"
     },
     {
         "id": "144",
         "description": "Coolsingel - Koopgoot",
         "stream": "GRT_18",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Gemeente Rotterdam"
     },
     {
         "id": "145",
         "description": "Schieweg",
         "stream": "GRT_19",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Gemeente Rotterdam"
     },
     {
         "id": "146",
         "description": "Weena - Hofplein - Coolsingel",
         "stream": "GRT_20",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Gemeente Rotterdam"
     },
     {
         "id": "147",
         "description": "Schiekade - Luchtsingel",
         "stream": "GRT_21",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Gemeente Rotterdam"
     },
     {
         "id": "148",
         "description": "Stadhoudersweg",
         "stream": "GRT_22",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Gemeente Rotterdam"
     },
     {
         "id": "149",
         "description": "Oostplein",
         "stream": "GRT_23",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Gemeente Rotterdam"
     },
     {
         "id": "150",
         "description": "Schiedamsedijk",
         "stream": "GRT_24",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Gemeente Rotterdam"
     },
     {
         "id": "151",
         "description": "Willemsbrug",
         "stream": "GRT_25",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Gemeente Rotterdam"
     },
     {
         "id": "161",
         "description": "Van Brienenoordbrug - noordzijde",
         "stream": "GRT_26",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Gemeente Rotterdam"
     },
     {
         "id": "162",
         "description": "Beneluxtunnel - noordzijde",
         "stream": "GRT_27",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Gemeente Rotterdam"
     },
 
 
@@ -339,67 +394,78 @@
         "id": "30",
         "description": "Enschede Auke Vleerstraat Kennispark",
         "stream": "",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Mobiel Twente"
     },
     {
         "id": "31",
         "description": "Enschede Zuiderval",
         "stream": "",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Mobiel Twente"
     },
     {
         "id": "32",
         "description": "Enschede Weerseloseweg N737 richting Enschede Noord",
         "stream": "",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Mobiel Twente"
     },
     {
         "id": "44",
         "description": "Afslag A35 (Hengelo-Zuid) - N739 (Haaksbergerstraat) Twentekanaal",
         "stream": "",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Mobiel Twente"
     },
     {
         "id": "69",
         "description": "N36 Almelo - Bedrijvenpark Twente",
         "stream": "",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Mobiel Twente"
     },
     {
         "id": "70",
         "description": "A1/A35 knooppunt Azelo - Buren",
         "stream": "",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Mobiel Twente"
     },
     {
         "id": "76",
         "description": "Hengelo Bornsestraat - ter hoogte van A1 - Westermaat",
         "stream": "",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Mobiel Twente"
     },
     {
         "id": "77",
         "description": "Hengelo Haaksbergerstraat Twentekanaal",
         "stream": "",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Mobiel Twente"
     },
     {
         "id": "78",
         "description": "Oldenzaal Hazewinkelweg Bedrijventerrein Hazewinkel",
         "stream": "",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Mobiel Twente"
     },
     {
         "id": "89",
         "description": "Hengelo Rondweg - ter hoogte van A1 richting Plein Westermaat",
         "stream": "",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Mobiel Twente"
     },
     {
         "id": "120",
         "description": "Hengelo Diamandstraat Twentekanaal",
         "stream": "",
-        "provider": "VID Nederland B.V."
+        "provider": "VID Nederland B.V.",
+        "manager": "Mobiel Twente"
     },
 
     
@@ -407,18 +473,21 @@
         "id": "holstlaan",
         "description": "Almelo Henriëtte Roland Holstlaan N349",
         "stream": "",
-        "provider": "N.V. Nederlandse Apparatenfabriek Nedap"
+        "provider": "N.V. Nederlandse Apparatenfabriek Nedap",
+        "manager": "Mobiel Twente"
     },
     {
         "id": "limburglaan",
         "description": "Almelo Van Rechteren Limpurgsingel N349 - ter hoogte van Nijreessingel",
         "stream": "",
-        "provider": "N.V. Nederlandse Apparatenfabriek Nedap"
+        "provider": "N.V. Nederlandse Apparatenfabriek Nedap",
+        "manager": "Mobiel Twente"
     },
     {
         "id": "sluitersveld",
         "description": "Almelo Sluitersveldsingel N349 Schelfhorst",
         "stream": "",
-        "provider": "N.V. Nederlandse Apparatenfabriek Nedap"
+        "provider": "N.V. Nederlandse Apparatenfabriek Nedap",
+        "manager": "Mobiel Twente"
     }
 ]
