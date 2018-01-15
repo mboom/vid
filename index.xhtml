@@ -39,6 +39,16 @@
                     },
 
 
+                    "filter": function(key, value) {
+                        var result = [];
+                        for (let camera of this.list) {
+                            if (typeof camera[key] !== "undefined" && camera[key] === value) {
+                                result.push(camera);
+                            }
+                        }
+                    },
+
+
                     "checkStream": function (id, stream) {
                         var cam = this.selectCamera(id);
                         if (stream === "live" && (typeof cam.stream === "undefined" || cam.stream === "")) {
@@ -104,6 +114,12 @@
                     } else if (cameras.checkSource(id, "static", "image")) {
                         cctv.addStatic(function () { return cameras.getStream(id, "static", "image"); });
                     }
+                },
+
+                addList: function (list) {
+                    for (camera of list) {
+                        addCamera(camera.id);
+                    }
                 }
             };
         </script>
@@ -122,6 +138,18 @@
                     for (let camera of cameras.list) {
                         cctv.addCamera(camera.id);
                     }
+                }
+
+                function loadVID() {
+                    cctv.addList(cameras.filter("manager", "VID Nederland B.V."));
+                }
+
+                function loadGRT() {
+                    cctv.addList(cameras.filter("manager", "Gemeente Rotterdam"));
+                }
+
+                function loadTM() {
+                    cctv.addList(cameras.filter("manager", "Twente Mobiel"));
                 }
             //]]>
         </script>

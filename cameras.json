@@ -395,77 +395,77 @@
         "description": "Enschede Auke Vleerstraat Kennispark",
         "stream": "",
         "provider": "VID Nederland B.V.",
-        "manager": "Mobiel Twente"
+        "manager": "Twente Mobiel"
     },
     {
         "id": "31",
         "description": "Enschede Zuiderval",
         "stream": "",
         "provider": "VID Nederland B.V.",
-        "manager": "Mobiel Twente"
+        "manager": "Twente Mobiel"
     },
     {
         "id": "32",
         "description": "Enschede Weerseloseweg N737 richting Enschede Noord",
         "stream": "",
         "provider": "VID Nederland B.V.",
-        "manager": "Mobiel Twente"
+        "manager": "Twente Mobiel"
     },
     {
         "id": "44",
         "description": "Afslag A35 (Hengelo-Zuid) - N739 (Haaksbergerstraat) Twentekanaal",
         "stream": "",
         "provider": "VID Nederland B.V.",
-        "manager": "Mobiel Twente"
+        "manager": "Twente Mobiel"
     },
     {
         "id": "69",
         "description": "N36 Almelo - Bedrijvenpark Twente",
         "stream": "",
         "provider": "VID Nederland B.V.",
-        "manager": "Mobiel Twente"
+        "manager": "Twente Mobiel"
     },
     {
         "id": "70",
         "description": "A1/A35 knooppunt Azelo - Buren",
         "stream": "",
         "provider": "VID Nederland B.V.",
-        "manager": "Mobiel Twente"
+        "manager": "Twente Mobiel"
     },
     {
         "id": "76",
         "description": "Hengelo Bornsestraat - ter hoogte van A1 - Westermaat",
         "stream": "",
         "provider": "VID Nederland B.V.",
-        "manager": "Mobiel Twente"
+        "manager": "Twente Mobiel"
     },
     {
         "id": "77",
         "description": "Hengelo Haaksbergerstraat Twentekanaal",
         "stream": "",
         "provider": "VID Nederland B.V.",
-        "manager": "Mobiel Twente"
+        "manager": "Twente Mobiel"
     },
     {
         "id": "78",
         "description": "Oldenzaal Hazewinkelweg Bedrijventerrein Hazewinkel",
         "stream": "",
         "provider": "VID Nederland B.V.",
-        "manager": "Mobiel Twente"
+        "manager": "Twente Mobiel"
     },
     {
         "id": "89",
         "description": "Hengelo Rondweg - ter hoogte van A1 richting Plein Westermaat",
         "stream": "",
         "provider": "VID Nederland B.V.",
-        "manager": "Mobiel Twente"
+        "manager": "Twente Mobiel"
     },
     {
         "id": "120",
         "description": "Hengelo Diamandstraat Twentekanaal",
         "stream": "",
         "provider": "VID Nederland B.V.",
-        "manager": "Mobiel Twente"
+        "manager": "Twente Mobiel"
     },
 
     
@@ -474,20 +474,20 @@
         "description": "Almelo Henriëtte Roland Holstlaan N349",
         "stream": "",
         "provider": "N.V. Nederlandse Apparatenfabriek Nedap",
-        "manager": "Mobiel Twente"
+        "manager": "Twente Mobiel"
     },
     {
         "id": "limburglaan",
         "description": "Almelo Van Rechteren Limpurgsingel N349 - ter hoogte van Nijreessingel",
         "stream": "",
         "provider": "N.V. Nederlandse Apparatenfabriek Nedap",
-        "manager": "Mobiel Twente"
+        "manager": "Twente Mobiel"
     },
     {
         "id": "sluitersveld",
         "description": "Almelo Sluitersveldsingel N349 Schelfhorst",
         "stream": "",
         "provider": "N.V. Nederlandse Apparatenfabriek Nedap",
-        "manager": "Mobiel Twente"
+        "manager": "Twente Mobiel"
     }
 ]
