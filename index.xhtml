@@ -39,12 +39,16 @@
 
 
                 "checkStream": function (id, stream) {
-                    return providers.checkStream(this.selectCamera(id).provider, stream);
+                    var cam = this.selectCamera(id);
+                    if (stream === "live" && (typeof cam.stream === "undefined" || cam.stream === "")) {
+                        return false;
+                    }
+                    return providers.checkStream(cam.provider, stream);
                 },
 
 
                 "checkSource": function (id, stream, protocol) {
-                    return providers.checkSource(this.selectCamera(id).provider, stream, protocol);
+                    return this.checkStream(id, stream) && providers.checkSource(this.selectCamera(id).provider, stream, protocol);
                 },
 
 
@@ -86,10 +90,10 @@
 
 
                 addCamera: function (id) {
-                    if (cameras.checkSource(id, "live", "HTTP Live Streaming") === true) {
+                    if (cameras.checkSource(id, "live", "HTTP Live Streaming")) {
                         cctv.addLive(cameras.getStream(id, "live", "HTTP Live Streaming"));
                     } else if (cameras.checkSource(id, "static", "image")) {
-                        cctv.addStatic(cameras.getStream(id, "static", "image") === true);
+                        cctv.addStatic(cameras.getStream(id, "static", "image"));
                     }
                 }
             };
