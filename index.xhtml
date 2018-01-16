@@ -39,7 +39,7 @@
                         <li class="mdl-menu__item menu_GRT" onclick="loadGRT();">Gemeente Rotterdam</li>
                         <li class="mdl-menu__item menu_TM" onclick="loadTM();">Twente Mobiel</li>
                         <li class="mdl-menu__item menu_ALL" onclick="loadALL();">Alles</li>
-                        <li class="mdl-menu__item menu_CLR" disabled="" onclick="loadCLR();">Reset</li>
+                        <li class="mdl-menu__item menu_CLR" data-mdl-disabled="" onclick="loadCLR();">Reset</li>
                     </ul>
                 </div>
             </div>
@@ -76,12 +76,12 @@
         
         <script
           crossorigin="anonymous"
-          defer=""
+          defer="defer"
           integrity="sha384-956oVN7Zn5taOnC+ET6HBmCuiU8b3qVoO+chxfCzwOG2QRGvkx/NsQ+STFqfoH9m"
           src="https://cdn.dashjs.org/latest/dash.mediaplayer.min.js"></script>
         
         <script
-          defer=""
+          defer="defer"
           src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
         <script src="providers.js"></script>
@@ -150,71 +150,73 @@
   
           
         <script>
-            var cctv = {
-                addLive: function (src, poster) {
-                    var video = document.createElement("video");
-                    video.setAttribute("autoplay", "autoplay");
-                    video.setAttribute("class", "screen");
-                    video.setAttribute("controls", "controls");
-                    video.setAttribute("data-dashjs-player", "");
-                    video.setAttribute("src", src);
+            //<![CDATA[
+                var cctv = {
+                    addLive: function (src, poster) {
+                        var video = document.createElement("video");
+                        video.setAttribute("autoplay", "autoplay");
+                        video.setAttribute("class", "screen");
+                        video.setAttribute("controls", "controls");
+                        video.setAttribute("data-dashjs-player", "");
+                        video.setAttribute("src", src);
 
-                    if (typeof poster !== "undefined" && poster !== "") {
-                        video.setAttribute("poster", poster);
-                    }
-
-                    var cell = document.createElement("div");
-                    cell.setAttribute("class", "mdl-cell mdl-cell--4-col center");
-                    cell.appendChild(video);
-                    componentHandler.upgradeElement(cell);
-                    document.querySelector("#wall").appendChild(cell);
-                },
-
-
-                addStatic: function (src) {
-                    var img = document.createElement("img");
-                    img.setAttribute("class", "screen");
-                    img.setAttribute("src", src());
-
-                    var reload = function () {
-                        setTimeout(reload, 2000);
-                        img.setAttribute("src", src());
-                    }
-                    img.addEventListener("load", reload);
-
-                    var cell = document.createElement("div");
-                    cell.setAttribute("class", "mdl-cell mdl-cell--4-col center");
-                    cell.appendChild(img);
-                    componentHandler.upgradeElement(cell);
-                    document.querySelector("#wall").appendChild(cell);
-                },
-
-
-                addCamera: function (id) {
-                    if (cameras.checkSource(id, "live", "HTTP Live Streaming")) {
-                        var poster;
-                        if (cameras.checkSource(id, "static", "image")) {
-                            poster = cameras.getStream(id, "static", "image");
+                        if (typeof poster !== "undefined" && poster !== "") {
+                            video.setAttribute("poster", poster);
                         }
-                        this.addLive(cameras.getStream(id, "live", "HTTP Live Streaming"), poster);
-                    } else if (cameras.checkSource(id, "static", "image")) {
-                        this.addStatic(function () { return cameras.getStream(id, "static", "image"); });
-                    }
-                },
 
-                addList: function (list) {
-                    for (camera of list) {
-                        this.addCamera(camera.id);
-                    }
-                },
+                        var cell = document.createElement("div");
+                        cell.setAttribute("class", "mdl-cell mdl-cell--4-col center");
+                        cell.appendChild(video);
+                        componentHandler.upgradeElement(cell);
+                        document.querySelector("#wall").appendChild(cell);
+                    },
 
-                clear: function () {
-                    var wall = document.querySelector("#wall");
-                    while (wall.firstElementChild) {
-                        wall.firstElementChild.remove();
+
+                    addStatic: function (src) {
+                        var img = document.createElement("img");
+                        img.setAttribute("class", "screen");
+                        img.setAttribute("src", src());
+
+                        var reload = function () {
+                            setTimeout(reload, 2000);
+                            img.setAttribute("src", src());
+                        }
+                        img.addEventListener("load", reload);
+
+                        var cell = document.createElement("div");
+                        cell.setAttribute("class", "mdl-cell mdl-cell--4-col center");
+                        cell.appendChild(img);
+                        componentHandler.upgradeElement(cell);
+                        document.querySelector("#wall").appendChild(cell);
+                    },
+
+
+                    addCamera: function (id) {
+                        if (cameras.checkSource(id, "live", "HTTP Live Streaming")) {
+                            var poster;
+                            if (cameras.checkSource(id, "static", "image")) {
+                                poster = cameras.getStream(id, "static", "image");
+                            }
+                            this.addLive(cameras.getStream(id, "live", "HTTP Live Streaming"), poster);
+                        } else if (cameras.checkSource(id, "static", "image")) {
+                            this.addStatic(function () { return cameras.getStream(id, "static", "image"); });
+                        }
+                    },
+
+                    addList: function (list) {
+                        for (camera of list) {
+                            this.addCamera(camera.id);
+                        }
+                    },
+
+                    clear: function () {
+                        var wall = document.querySelector("#wall");
+                        while (wall.firstElementChild) {
+                            wall.firstElementChild.remove();
+                        }
                     }
-                }
-            };
+                };
+            //]]>
         </script>
   
   
@@ -224,11 +226,11 @@
                 function loadVID() {
                     document.querySelector("#more-button").dispatchEvent(new Event("click"));
 
-                    document.querySelector(".menu_VID").setAttribute("disabled", "");
-                    document.querySelector(".menu_GRT").removeAttribute("disabled")
-                    document.querySelector(".menu_TM").removeAttribute("disabled");
-                    document.querySelector(".menu_ALL").removeAttribute("disabled");
-                    document.querySelector(".menu_CLR").removeAttribute("disabled");
+                    document.querySelector(".menu_VID").setAttribute("data-mdl-disabled", "");
+                    document.querySelector(".menu_GRT").removeAttribute("data-mdl-disabled")
+                    document.querySelector(".menu_TM").removeAttribute("data-mdl-disabled");
+                    document.querySelector(".menu_ALL").removeAttribute("data-mdl-disabled");
+                    document.querySelector(".menu_CLR").removeAttribute("data-mdl-disabled");
 
                     cctv.clear();
                     cctv.addList(cameras.filter("manager", "VID Nederland B.V."));
@@ -237,11 +239,11 @@
                 function loadGRT() {
                     document.querySelector("#more-button").dispatchEvent(new Event("click"));
 
-                    document.querySelector(".menu_VID").removeAttribute("disabled");
-                    document.querySelector(".menu_GRT").setAttribute("disabled", "")
-                    document.querySelector(".menu_TM").removeAttribute("disabled");
-                    document.querySelector(".menu_ALL").removeAttribute("disabled");
-                    document.querySelector(".menu_CLR").removeAttribute("disabled");
+                    document.querySelector(".menu_VID").removeAttribute("data-mdl-disabled");
+                    document.querySelector(".menu_GRT").setAttribute("data-mdl-disabled", "")
+                    document.querySelector(".menu_TM").removeAttribute("data-mdl-disabled");
+                    document.querySelector(".menu_ALL").removeAttribute("data-mdl-disabled");
+                    document.querySelector(".menu_CLR").removeAttribute("data-mdl-disabled");
 
                     cctv.clear();
                     cctv.addList(cameras.filter("manager", "Gemeente Rotterdam"));
@@ -250,11 +252,11 @@
                 function loadTM() {
                     document.querySelector("#more-button").dispatchEvent(new Event("click"));
 
-                    document.querySelector(".menu_VID").removeAttribute("disabled");
-                    document.querySelector(".menu_GRT").removeAttribute("disabled")
-                    document.querySelector(".menu_TM").setAttribute("disabled", "");
-                    document.querySelector(".menu_ALL").removeAttribute("disabled");
-                    document.querySelector(".menu_CLR").removeAttribute("disabled");
+                    document.querySelector(".menu_VID").removeAttribute("data-mdl-disabled");
+                    document.querySelector(".menu_GRT").removeAttribute("data-mdl-disabled")
+                    document.querySelector(".menu_TM").setAttribute("data-mdl-disabled", "");
+                    document.querySelector(".menu_ALL").removeAttribute("data-mdl-disabled");
+                    document.querySelector(".menu_CLR").removeAttribute("data-mdl-disabled");
 
                     cctv.clear();
                     cctv.addList(cameras.filter("manager", "Twente Mobiel"));
@@ -263,11 +265,11 @@
                 function loadALL() {
                     document.querySelector("#more-button").dispatchEvent(new Event("click"));
 
-                    document.querySelector(".menu_VID").removeAttribute("disabled");
-                    document.querySelector(".menu_GRT").removeAttribute("disabled")
-                    document.querySelector(".menu_TM").removeAttribute("disabled");
-                    document.querySelector(".menu_ALL").setAttribute("disabled", "");
-                    document.querySelector(".menu_CLR").removeAttribute("disabled");
+                    document.querySelector(".menu_VID").removeAttribute("data-mdl-disabled");
+                    document.querySelector(".menu_GRT").removeAttribute("data-mdl-disabled")
+                    document.querySelector(".menu_TM").removeAttribute("data-mdl-disabled");
+                    document.querySelector(".menu_ALL").setAttribute("data-mdl-disabled", "");
+                    document.querySelector(".menu_CLR").removeAttribute("data-mdl-disabled");
 
                     cctv.clear();
                     cctv.addList(cameras.list);
@@ -276,11 +278,11 @@
                 function loadCLR() {
                     document.querySelector("#more-button").dispatchEvent(new Event("click"));
 
-                    document.querySelector(".menu_VID").removeAttribute("disabled");
-                    document.querySelector(".menu_GRT").removeAttribute("disabled")
-                    document.querySelector(".menu_TM").removeAttribute("disabled");
-                    document.querySelector(".menu_ALL").removeAttribute("disabled");
-                    document.querySelector(".menu_CLR").setAttribute("disabled", "");
+                    document.querySelector(".menu_VID").removeAttribute("data-mdl-disabled");
+                    document.querySelector(".menu_GRT").removeAttribute("data-mdl-disabled")
+                    document.querySelector(".menu_TM").removeAttribute("data-mdl-disabled");
+                    document.querySelector(".menu_ALL").removeAttribute("data-mdl-disabled");
+                    document.querySelector(".menu_CLR").setAttribute("data-mdl-disabled", "");
 
                     cctv.clear();
                 }
