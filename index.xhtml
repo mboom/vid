@@ -54,10 +54,11 @@
 
 
         <!--
-        <script
-          crossorigin="anonymous"
-          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-          src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+            Derive integrity hash by executing
+
+                wget -qO - URI | openssl dgst -sha384 -binary | openssl enc -base64 -A
+            
+            Set integrity of script as: integrity="sha384-HASH"
         -->
 
         <script
@@ -65,11 +66,19 @@
           integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f"
           src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         
+        <!--
         <script
           crossorigin="anonymous"
           defer=""
           integrity="sha384-Sdn/7riOcTef1/0H0VnTFwn+AoR63nSN6Oc5sUQW5iMkYYAfGSO9hT7yXOGngw+P"
           src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+        -->
+        
+        <script
+          crossorigin="anonymous"
+          defer=""
+          integrity="sha384-956oVN7Zn5taOnC+ET6HBmCuiU8b3qVoO+chxfCzwOG2QRGvkx/NsQ+STFqfoH9m"
+          src="https://cdn.dashjs.org/latest/dash.mediaplayer.min.js"></script>
         
         <script
           defer=""
@@ -142,13 +151,17 @@
           
         <script>
             var cctv = {
-                addLive: function (src) {
+                addLive: function (src, poster) {
                     var video = document.createElement("video");
-                    video.setAttribute("autoplay", "");
+                    video.setAttribute("autoplay", "autoplay");
                     video.setAttribute("class", "screen");
-                    video.setAttribute("controls", "");
+                    video.setAttribute("controls", "controls");
                     video.setAttribute("data-dashjs-player", "");
                     video.setAttribute("src", src);
+
+                    if (typeof poster !== "undefined" && poster !== "") {
+                        video.setAttribute("poster", poster);
+                    }
 
                     var cell = document.createElement("div");
                     cell.setAttribute("class", "mdl-cell mdl-cell--4-col center");
@@ -179,7 +192,11 @@
 
                 addCamera: function (id) {
                     if (cameras.checkSource(id, "live", "HTTP Live Streaming")) {
-                        this.addLive(cameras.getStream(id, "live", "HTTP Live Streaming"));
+                        var poster;
+                        if (cameras.checkSource(id, "static", "image")) {
+                            poster = cameras.getStream(id, "static", "image");
+                        }
+                        this.addLive(cameras.getStream(id, "live", "HTTP Live Streaming"), poster);
                     } else if (cameras.checkSource(id, "static", "image")) {
                         this.addStatic(function () { return cameras.getStream(id, "static", "image"); });
                     }
