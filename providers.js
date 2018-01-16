@@ -39,7 +39,7 @@ var providers = {
                             "protocol": "Real Time Streaming Protocol",
                             "format": "M3U8",
                             "location": function (stream) {
-                                return "https://stream.vid.nl:1935/rtplive/"
+                                return "rtsps://stream.vid.nl:1935/rtplive/"
                                   + stream + ".stream/playlist.m3u8";
                             }
                         }
