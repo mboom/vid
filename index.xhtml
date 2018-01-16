@@ -70,7 +70,6 @@
         
         <script
           crossorigin="anonymous"
-          defer="defer"
           integrity="sha384-956oVN7Zn5taOnC+ET6HBmCuiU8b3qVoO+chxfCzwOG2QRGvkx/NsQ+STFqfoH9m"
           src="https://cdn.dashjs.org/latest/dash.mediaplayer.min.js"></script>
         
@@ -194,13 +193,13 @@
 
 
                     addCamera: function (id) {
-                        if (cameras.checkSource(id, "live", "HTTP Live Streaming")) {
+                        if (cameras.checkSource(id, "live", "MPEG-DASH Media Presentation Description")) {
                             var poster;
                             if (cameras.checkSource(id, "static", "image")) {
                                 poster = cameras.getStream(id, "static", "image");
                             }
 
-                            this.addLive(cameras.getStream(id, "live", "HTTP Live Streaming"),
+                            this.addLive(cameras.getStream(id, "live", "MPEG-DASH Media Presentation Description"),
                               cameras.getDescription(id), poster);
                             
 
