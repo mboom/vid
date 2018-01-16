@@ -1,196 +1,196 @@
 [
     {
         "id": "3",
-        "description": "A10 t.h.v. knooppunt Coenplein Noord, Camera knp. Coenplein (A8, A10)",
+        "description": "A10 t.h.v. knooppunt Coenplein Noord; Camera knp. Coenplein (A8, A10)",
         "stream": "IB_19",
         "provider": "VID Nederland B.V.",
         "manager": "VID Nederland B.V."
     },
     {
         "id": "5",
-        "description": "A10 t.h.v. knooppunt Amstel, Camera knp. Amstel (A2, A10)",
+        "description": "A10 t.h.v. knooppunt Amstel; Camera knp. Amstel (A2, A10)",
         "stream": "IB_100",
         "provider": "VID Nederland B.V.",
         "manager": "VID Nederland B.V."
     },
     {
         "id": "6",
-        "description": "A2 bij Zaltbommel, A2 Utrecht - Den Bosch, Camera Zaltbommel (A2)",
+        "description": "A2 bij Zaltbommel; A2 Utrecht - Den Bosch; Camera Zaltbommel (A2)",
         "stream": "IB_26",
         "provider": "VID Nederland B.V.",
         "manager": "VID Nederland B.V."
     },
     {
         "id": "11",
-        "description": "A12 t.h.v. knooppunt Gouwe, A12 knooppunt Gouwe, Camera knp. Gouwe (A12, A20)",
+        "description": "A12 t.h.v. knooppunt Gouwe; A12 knooppunt Gouwe; Camera knp. Gouwe (A12, A20)",
         "stream": "IB_13",
         "provider": "VID Nederland B.V.",
         "manager": "VID Nederland B.V."
     },
     {
         "id": "12",
-        "description": "A4 t.h.v. Roelofarendsveen, Camera Roelofarendsveen (A4)",
+        "description": "A4 t.h.v. Roelofarendsveen; Camera Roelofarendsveen (A4)",
         "stream": "IB_64",
         "provider": "VID Nederland B.V.",
         "manager": "VID Nederland B.V."
     },
     {
         "id": "13",
-        "description": "A16 t.h.v. Zwijndrecht, Camera Zwijndrecht (A16)",
+        "description": "A16 t.h.v. Zwijndrecht; Camera Zwijndrecht (A16)",
         "stream": "IB_41",
         "provider": "VID Nederland B.V.",
         "manager": "VID Nederland B.V."
     },
     {
         "id": "14",
-        "description": "A10 t.h.v. aansluiting S107, Camera knp. De Nieuwe Meer (A10)",
+        "description": "A10 t.h.v. aansluiting S107; Camera knp. De Nieuwe Meer (A10)",
         "stream": "IB_25",
         "provider": "VID Nederland B.V.",
         "manager": "VID Nederland B.V."
     },
     {
         "id": "15",
-        "description": "A27 t.h.v. Gorinchem, Camera Gorinchem (A27)",
+        "description": "A27 t.h.v. Gorinchem; Camera Gorinchem (A27)",
         "stream": "IB_22a",
         "provider": "VID Nederland B.V.",
         "manager": "VID Nederland B.V."
     },
     {
         "id": "18",
-        "description": "A4 t.h.v. Amsterdam-Sloten, Camera Sloten (A4)",
+        "description": "A4 t.h.v. Amsterdam-Sloten; Camera Sloten (A4)",
         "stream": "IB_94",
         "provider": "VID Nederland B.V.",
         "manager": "VID Nederland B.V."
     },
     {
         "id": "19",
-        "description": "A4 t.h.v. knp. De Hoek, Camera knp. De Hoek (A4, A5)",
+        "description": "A4 t.h.v. knp. De Hoek; Camera knp. De Hoek (A4, A5)",
         "stream": "IB_92",
         "provider": "VID Nederland B.V.",
         "manager": "VID Nederland B.V."
     },
     {
         "id": "27",
-        "description": "A2 t.h.v. Vianen, Camera Vianen (A2)",
+        "description": "A2 t.h.v. Vianen; Camera Vianen (A2)",
         "stream": "IB_69",
         "provider": "VID Nederland B.V.",
         "manager": "VID Nederland B.V."
     },
     {
         "id": "34",
-        "description": "A9 t.h.v. Amstelveen, Camera Amstelveen (A9)",
+        "description": "A9 t.h.v. Amstelveen; Camera Amstelveen (A9)",
         "stream": "IB_207",
         "provider": "VID Nederland B.V.",
         "manager": "VID Nederland B.V."
     },
     {
         "id": "36",
-        "description": "A9 t.h.v. knooppunt Holendrecht, Camera knp. Holendrecht (A2, A9)",
+        "description": "A9 t.h.v. knooppunt Holendrecht; Camera knp. Holendrecht (A2, A9)",
         "stream": "IB_14",
         "provider": "VID Nederland B.V.",
         "manager": "VID Nederland B.V."
     },
     {
         "id": "39",
-        "description": "A4 t.h.v. Vlaardingen, Camera Vlaardingen (A4)",
+        "description": "A4 t.h.v. Vlaardingen; Camera Vlaardingen (A4)",
         "stream": "IB_70",
         "provider": "VID Nederland B.V.",
         "manager": "VID Nederland B.V."
     },
     {
         "id": "40",
-        "description": "A13 t.h.v. Delft, Camera Delft (A13)",
+        "description": "A13 t.h.v. Delft; Camera Delft (A13)",
         "stream": "IB_20",
         "provider": "VID Nederland B.V.",
         "manager": "VID Nederland B.V."
     },
     {
         "id": "41",
-        "description": "A10 t.h.v. knooppunt Westpoort, A5/A10 knooppunt Westpoort, Camera Westpoort (A10)",
+        "description": "A10 t.h.v. knooppunt Westpoort; A5/A10 knooppunt Westpoort; Camera Westpoort (A10)",
         "stream": "IB_16",
         "provider": "VID Nederland B.V.",
         "manager": "VID Nederland B.V."
     },
     {
         "id": "45",
-        "description": "A16 t.h.v. de Van Brienenoordbrug, Camera Van Brienenoordbrug (A16)",
+        "description": "A16 t.h.v. de Van Brienenoordbrug; Camera Van Brienenoordbrug (A16)",
         "stream": "IB_205",
         "provider": "VID Nederland B.V.",
         "manager": "VID Nederland B.V."
     },
     {
         "id": "46",
-        "description": "A12 t.h.v. Oudenrijn, Camera Oudenrijn (A12)",
+        "description": "A12 t.h.v. Oudenrijn; Camera Oudenrijn (A12)",
         "stream": "IB_201",
         "provider": "VID Nederland B.V.",
         "manager": "VID Nederland B.V."
     },
     {
         "id": "61",
-        "description": "A10 t.h.v. knooppunt Watergraafsmeer, A10 knooppunt Watergraafsmeer, Camera knp. Watergraafsmeer (A10)",
+        "description": "A10 t.h.v. knooppunt Watergraafsmeer; A10 knooppunt Watergraafsmeer; Camera knp. Watergraafsmeer (A10)",
         "stream": "IB_33",
         "provider": "VID Nederland B.V.",
         "manager": "VID Nederland B.V."
     },
     {
         "id": "62",
-        "description": "A1 t.h.v. Amersfoort, Camera Amersfoort (A1)",
+        "description": "A1 t.h.v. Amersfoort; Camera Amersfoort (A1)",
         "stream": "IB_55",
         "provider": "VID Nederland B.V.",
         "manager": "VID Nederland B.V."
     },
     {
         "id": "86",
-        "description": "A20 t.h.v. Rotterdam Spaanse Polder, A20 Spaanse Polder, Camera Spaanse Polder (A20)",
+        "description": "A20 t.h.v. Rotterdam Spaanse Polder; A20 Spaanse Polder; Camera Spaanse Polder (A20)",
         "stream": "IB_43",
         "provider": "VID Nederland B.V.",
         "manager": "VID Nederland B.V."
     },
     {
         "id": "87",
-        "description": "A9 t.h.v. knooppunt Rottepolderplein, A9 / A200 knooppunt Rottepolderplein, Camera Rottepolderplein (A9)",
+        "description": "A9 t.h.v. knooppunt Rottepolderplein; A9 / A200 knooppunt Rottepolderplein; Camera Rottepolderplein (A9)",
         "stream": "IB_45",
         "provider": "VID Nederland B.V.",
         "manager": "VID Nederland B.V."
     },
     {
         "id": "107",
-        "description": "A12 t.h.v. Hoograven, A12 / Waterlinieweg / Knp Lunetten A27, Camera Hoograven (A12)",
+        "description": "A12 t.h.v. Hoograven; A12 / Waterlinieweg / Knp Lunetten A27; Camera Hoograven (A12)",
         "stream": "IB_91",
         "provider": "VID Nederland B.V.",
         "manager": "VID Nederland B.V."
     },
     {
         "id": "108",
-        "description": "A4 t.h.v. Leiden, A4 t.h.v. N11, Camera Leiden (A4)",
+        "description": "A4 t.h.v. Leiden; A4 t.h.v. N11; Camera Leiden (A4)",
         "stream": "IB_28",
         "provider": "VID Nederland B.V.",
         "manager": "VID Nederland B.V."
     },
     {
         "id": "114",
-        "description": "Driebergen-Zeist 2, Driebergenseweg",
+        "description": "Driebergen-Zeist 2; Driebergenseweg",
         "stream": "",
         "provider": "VID Nederland B.V.",
         "manager": "VID Nederland B.V."
     },
     {
         "id": "118",
-        "description": "A6 t.h.v. Almere-stad, Camera Almere-Stad (A6)",
+        "description": "A6 t.h.v. Almere-stad; Camera Almere-Stad (A6)",
         "stream": "IB_37",
         "provider": "VID Nederland B.V.",
         "manager": "VID Nederland B.V."
     },
     {
         "id": "119",
-        "description": "A9 t.h.v. Diemen, Camera t.h.v. Diemen (A9)",
+        "description": "A9 t.h.v. Diemen; Camera t.h.v. Diemen (A9)",
         "stream": "IB_231",
         "provider": "VID Nederland B.V.",
         "manager": "VID Nederland B.V."
     },
     {
         "id": "121",
-        "description": "A16 t.h.v. Dordrecht, Camera t.h.v. Dordrecht (A16)",
+        "description": "A16 t.h.v. Dordrecht; Camera t.h.v. Dordrecht (A16)",
         "stream": "IB_50",
         "provider": "VID Nederland B.V.",
         "manager": "VID Nederland B.V."

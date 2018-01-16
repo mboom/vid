@@ -10,6 +10,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
 
+
         <style>
             .center {
                 justify-content: center;
@@ -24,6 +25,7 @@
         </style>
         <title>Overview</title>
     </head>
+
 
 
     <body>
@@ -133,7 +135,7 @@
 
 
                     "getDescription": function (id) {
-                        var description = this.selectCamera(id).description.split(",");
+                        var description = this.selectCamera(id).description.split(";");
                         return description[description.length - 1];
                     }
                 };
