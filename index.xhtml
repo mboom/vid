@@ -136,7 +136,7 @@
 
                     "getDescription": function (id) {
                         var description = this.selectCamera(id).description.split(";");
-                        return description[description.length - 1];
+                        return description[description.length - 1].trim();;
                     }
                 };
 
@@ -194,13 +194,13 @@
 
 
                     addCamera: function (id) {
-                        if (cameras.checkSource(id, "live", "MPEG-DASH Media Presentation Description")) {
+                        if (cameras.checkSource(id, "live", "Real Time Streaming Protocol")) {
                             var poster;
                             if (cameras.checkSource(id, "static", "image")) {
                                 poster = cameras.getStream(id, "static", "image");
                             }
 
-                            this.addLive(cameras.getStream(id, "live", "MPEG-DASH Media Presentation Description"),
+                            this.addLive(cameras.getStream(id, "live", "Real Time Streaming Protocol"),
                               cameras.getDescription(id), poster);
                             
 
