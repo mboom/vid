@@ -194,13 +194,13 @@
 
 
                     addCamera: function (id) {
-                        if (cameras.checkSource(id, "live", "Real Time Streaming Protocol")) {
+                        if (cameras.checkSource(id, "live", "HTTP Live Streaming")) {
                             var poster;
                             if (cameras.checkSource(id, "static", "image")) {
                                 poster = cameras.getStream(id, "static", "image");
                             }
 
-                            this.addLive(cameras.getStream(id, "live", "Real Time Streaming Protocol"),
+                            this.addLive(cameras.getStream(id, "live", "HTTP Live Streaming"),
                               cameras.getDescription(id), poster);
                             
 
