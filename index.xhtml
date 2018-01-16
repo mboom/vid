@@ -35,11 +35,11 @@
                         <i class="material-icons">more_vert</i>
                     </button>
                     <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
-                        <li class="mdl-menu__item menu_VID"><a href="javascript:loadVID();">VID Nederland B.V.</a></li>
-                        <li class="mdl-menu__item menu_GRT"><a href="javascript:loadGRT();">Gemeente Rotterdam</a></li>
-                        <li class="mdl-menu__item menu_TM"><a href="javascript:loadTM();">Twente Mobiel</a></li>
-                        <li class="mdl-menu__item menu_ALL"><a href="javascript:loadALL();">Alles</a></li>
-                        <li class="mdl-menu__item menu_CLR" disabled=""><a href="javascript:loadCLR();">Reset</a></li>
+                        <li class="mdl-menu__item menu_VID" onclick="loadVID();">VID Nederland B.V.</li>
+                        <li class="mdl-menu__item menu_GRT" onclick="loadGRT();">Gemeente Rotterdam</li>
+                        <li class="mdl-menu__item menu_TM" onclick="loadTM();">Twente Mobiel</li>
+                        <li class="mdl-menu__item menu_ALL" onclick="loadALL();">Alles</li>
+                        <li class="mdl-menu__item menu_CLR" disabled="" onclick="loadCLR();">Reset</li>
                     </ul>
                 </div>
             </div>
@@ -205,51 +205,66 @@
         <script>
             //<![CDATA[
                 function loadVID() {
+                    document.querySelector("#more-button").dispatchEvent(new Event("click"));
+
                     document.querySelector(".menu_VID").setAttribute("disabled", "");
                     document.querySelector(".menu_GRT").removeAttribute("disabled")
                     document.querySelector(".menu_TM").removeAttribute("disabled");
                     document.querySelector(".menu_ALL").removeAttribute("disabled");
                     document.querySelector(".menu_CLR").removeAttribute("disabled");
+
                     cctv.clear();
                     cctv.addList(cameras.filter("manager", "VID Nederland B.V."));
                 }
 
                 function loadGRT() {
+                    document.querySelector("#more-button").dispatchEvent(new Event("click"));
+
                     document.querySelector(".menu_VID").removeAttribute("disabled");
                     document.querySelector(".menu_GRT").setAttribute("disabled", "")
                     document.querySelector(".menu_TM").removeAttribute("disabled");
                     document.querySelector(".menu_ALL").removeAttribute("disabled");
                     document.querySelector(".menu_CLR").removeAttribute("disabled");
+
                     cctv.clear();
                     cctv.addList(cameras.filter("manager", "Gemeente Rotterdam"));
                 }
 
                 function loadTM() {
+                    document.querySelector("#more-button").dispatchEvent(new Event("click"));
+
                     document.querySelector(".menu_VID").removeAttribute("disabled");
                     document.querySelector(".menu_GRT").removeAttribute("disabled")
                     document.querySelector(".menu_TM").setAttribute("disabled", "");
                     document.querySelector(".menu_ALL").removeAttribute("disabled");
                     document.querySelector(".menu_CLR").removeAttribute("disabled");
+
                     cctv.clear();
                     cctv.addList(cameras.filter("manager", "Twente Mobiel"));
                 }
                 
                 function loadALL() {
+                    document.querySelector("#more-button").dispatchEvent(new Event("click"));
+
                     document.querySelector(".menu_VID").removeAttribute("disabled");
                     document.querySelector(".menu_GRT").removeAttribute("disabled")
                     document.querySelector(".menu_TM").removeAttribute("disabled");
                     document.querySelector(".menu_ALL").setAttribute("disabled", "");
                     document.querySelector(".menu_CLR").removeAttribute("disabled");
+
                     cctv.clear();
                     cctv.addList(cameras.list);
                 }
 
                 function loadCLR() {
+                    document.querySelector("#more-button").dispatchEvent(new Event("click"));
+
                     document.querySelector(".menu_VID").removeAttribute("disabled");
                     document.querySelector(".menu_GRT").removeAttribute("disabled")
                     document.querySelector(".menu_TM").removeAttribute("disabled");
                     document.querySelector(".menu_ALL").removeAttribute("disabled");
                     document.querySelector(".menu_CLR").setAttribute("disabled", "");
+
                     cctv.clear();
                 }
             //]]>
