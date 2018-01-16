@@ -15,6 +15,12 @@
                 justify-content: center;
                 text-align: center;
             }
+
+
+            .screen {
+                height: auto;
+                width: auto;
+            }
         </style>
         <title>Overview</title>
     </head>
@@ -131,6 +137,7 @@
                 addLive: function (src) {
                     var video = document.createElement("video");
                     video.setAttribute("autoplay", "");
+                    video.setAttribute("class", "screen");
                     video.setAttribute("controls", "");
                     video.setAttribute("data-dashjs-player", "");
                     video.setAttribute("src", src);
@@ -138,12 +145,14 @@
                     var cell = document.createElement("div");
                     cell.setAttribute("class", "mdl-cell mdl-cell--4-col center");
                     cell.appendChild(video);
+                    componentHandler.upgradeElement(cell);
                     document.querySelector("#wall").appendChild(cell);
                 },
 
 
                 addStatic: function (src) {
                     var img = document.createElement("img");
+                    img.setAttribute("class", "screen");
                     img.setAttribute("src", src());
 
                     var reload = function () {
@@ -155,6 +164,7 @@
                     var cell = document.createElement("div");
                     cell.setAttribute("class", "mdl-cell mdl-cell--4-col center");
                     cell.appendChild(img);
+                    componentHandler.upgradeElement(cell);
                     document.querySelector("#wall").appendChild(cell);
                 },
 
