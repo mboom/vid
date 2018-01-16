@@ -11,14 +11,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
 
         <style>
-            video {
-                height: 360px;
-                width: 640px;
-            }
-
-
             .center {
                 justify-content: center;
+                text-align: center;
             }
         </style>
         <title>Overview</title>
@@ -34,10 +29,10 @@
                         <i class="material-icons">more_vert</i>
                     </button>
                     <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
-                        <li class="mdl-menu__item">VID Nederland B.V.</li>
-                        <li class="mdl-menu__item">Gemeente Rotterdam</li>
-                        <li disabled="" class="mdl-menu__item">Twente Mobiel</li>
-                        <li class="mdl-menu__item">Alles</li>
+                        <li class="mdl-menu__item" onclick="loadVID();">VID Nederland B.V.</li>
+                        <li class="mdl-menu__item" onclick="loadGRT();">Gemeente Rotterdam</li>
+                        <li class="mdl-menu__item" onclick="loadTM();">Twente Mobiel</li>
+                        <li class="mdl-menu__item" onclick="loadAll();">Alles</li>
                     </ul>
                 </div>
             </div>
@@ -45,7 +40,7 @@
 
 
             <div class="android-content mdl-layout__content">
-                <div class="mdl-grid">
+                <div class="mdl-grid" id="wall">
                         <div class="mdl-cell mdl-cell--4-col center">Cam 1</div>
                         <div class="mdl-cell mdl-cell--4-col center">Cam 2</div>
                         <div class="mdl-cell mdl-cell--4-col center">Cam 3</div>
@@ -139,7 +134,11 @@
                     video.setAttribute("controls", "");
                     video.setAttribute("data-dashjs-player", "");
                     video.setAttribute("src", src);
-                    document.querySelector("body").appendChild(video);
+
+                    var cell = document.createElement("div");
+                    cell.setAttribute("class", "mdl-cell mdl-cell--4-col center");
+                    cell.appendChild(video);
+                    document.querySelector("#wall").appendChild(cell);
                 },
 
 
@@ -153,7 +152,10 @@
                     }
                     img.addEventListener("load", reload);
 
-                    document.querySelector("body").appendChild(img);
+                    var cell = document.createElement("div");
+                    cell.setAttribute("class", "mdl-cell mdl-cell--4-col center");
+                    cell.appendChild(img);
+                    document.querySelector("#wall").appendChild(cell);
                 },
 
 
@@ -168,6 +170,13 @@
                 addList: function (list) {
                     for (camera of list) {
                         this.addCamera(camera.id);
+                    }
+                },
+
+                clear: function () {
+                    var wall = document.querySelector("#wall");
+                    while (wall.firstElementChild) {
+                        wall.firstElementChild.remove();
                     }
                 }
             };
@@ -184,20 +193,22 @@
                 }
 
                 function loadAll() {
-                    for (let camera of cameras.list) {
-                        cctv.addCamera(camera.id);
-                    }
+                    cctv.clear();
+                    cctv.addList(cameras.list);
                 }
 
                 function loadVID() {
+                    cctv.clear();
                     cctv.addList(cameras.filter("manager", "VID Nederland B.V."));
                 }
 
                 function loadGRT() {
+                    cctv.clear();
                     cctv.addList(cameras.filter("manager", "Gemeente Rotterdam"));
                 }
 
                 function loadTM() {
+                    cctv.clear();
                     cctv.addList(cameras.filter("manager", "Twente Mobiel"));
                 }
             //]]>
