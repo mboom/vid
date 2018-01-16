@@ -66,14 +66,6 @@
           integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f"
           src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         
-        <!--
-        <script
-          crossorigin="anonymous"
-          defer=""
-          integrity="sha384-Sdn/7riOcTef1/0H0VnTFwn+AoR63nSN6Oc5sUQW5iMkYYAfGSO9hT7yXOGngw+P"
-          src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
-        -->
-        
         <script
           crossorigin="anonymous"
           defer="defer"
@@ -137,6 +129,12 @@
                             source = cam.stream;
                         }
                         return providers.selectSource(cam.provider, stream, protocol).location(source);
+                    },
+
+
+                    "getDescription": function (id) {
+                        var description = this.selectCamera(id).description.split(",");
+                        return description[description.length - 1];
                     }
                 };
 
@@ -152,7 +150,7 @@
         <script>
             //<![CDATA[
                 var cctv = {
-                    addLive: function (src, poster) {
+                    addLive: function (src, description, poster) {
                         var video = document.createElement("video");
                         video.setAttribute("autoplay", "autoplay");
                         video.setAttribute("class", "screen");
@@ -166,13 +164,14 @@
 
                         var cell = document.createElement("div");
                         cell.setAttribute("class", "mdl-cell mdl-cell--4-col center");
+                        cell.appendChild(document.createTextNode(description));
                         cell.appendChild(video);
                         componentHandler.upgradeElement(cell);
                         document.querySelector("#wall").appendChild(cell);
                     },
 
 
-                    addStatic: function (src) {
+                    addStatic: function (src, description) {
                         var img = document.createElement("img");
                         img.setAttribute("class", "screen");
                         img.setAttribute("src", src());
@@ -185,6 +184,7 @@
 
                         var cell = document.createElement("div");
                         cell.setAttribute("class", "mdl-cell mdl-cell--4-col center");
+                        cell.appendChild(document.createTextNode(description));
                         cell.appendChild(img);
                         componentHandler.upgradeElement(cell);
                         document.querySelector("#wall").appendChild(cell);
@@ -197,9 +197,14 @@
                             if (cameras.checkSource(id, "static", "image")) {
                                 poster = cameras.getStream(id, "static", "image");
                             }
-                            this.addLive(cameras.getStream(id, "live", "HTTP Live Streaming"), poster);
+
+                            this.addLive(cameras.getStream(id, "live", "HTTP Live Streaming"),
+                              cameras.getDescription(id), poster);
+                            
+
                         } else if (cameras.checkSource(id, "static", "image")) {
-                            this.addStatic(function () { return cameras.getStream(id, "static", "image"); });
+                            this.addStatic(function () { return cameras.getStream(id, "static", "image"); },
+                              cameras.getDescription(id));
                         }
                     },
 
