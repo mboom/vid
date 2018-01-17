@@ -172,7 +172,7 @@
 
                 function removeNode(node) {
                     while (node.firstElementChild) {
-                        node.firstElementChild.removeNode(node);
+                        removeNode(node);
                     }
                     console.log("removing");
                     removeImg(node);
