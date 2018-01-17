@@ -78,6 +78,8 @@
           defer="defer"
           src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
+        <script src="tinygif.js"></script>
+        
         <script src="providers.js"></script>
 
   
@@ -151,10 +153,28 @@
           
         <script>
             //<![CDATA[
+                function removeImg(img) {
+                    if (img.nodeName === "IMG") {
+                        img.setAttribute("src", tinygif);
+                        console.log("removing image");
+                    }
+                }
+
+
+                function removeVideo(video) {
+                    if (video.nodeName === "VIDEO") {
+                        video.setAttribute("poster", tinygif);
+                        console.log("removing video");
+                    }
+                }
+
+
                 function removeNode(node) {
                     while (node.firstElementChild) {
                         node.firstElementChild.remove();
                     }
+                    removeImg();
+                    removeVideo();
                     node.remove();
                 }
 
@@ -196,6 +216,8 @@
                             if (typeof img.parentElement !== "undefined" && img.parentNode !== null) {
                                 setTimeout(reload, 2000);
                                 img.setAttribute("src", src());
+                            } else {
+                                img.setAttribute("src", tinygif);
                             }
                         }
                         img.addEventListener("load", reload);
