@@ -154,7 +154,6 @@
         <script>
             //<![CDATA[
                 function removeImg(img) {
-                    console.log(tinygif);
                     if (img.nodeName.toLowerCase() === "img") {
                         img.setAttribute("src", tinygif);
                     }
@@ -257,7 +256,7 @@
 
 
                     clear: function () {
-
+                        console.log(tinygif);
                         while (this.players.length > 0) {
                             this.players.pop().reset();
                         }
