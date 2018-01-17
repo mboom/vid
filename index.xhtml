@@ -155,7 +155,7 @@
             //<![CDATA[
                 function removeImg(img) {
                     console.log("starting to remove image");
-                    if (img.nodeName === "IMG") {
+                    if (img.nodeName.toLowerCase() === "img") {
                         img.setAttribute("src", tinygif);
                         console.log("removing image");
                     }
@@ -163,7 +163,7 @@
 
 
                 function removeVideo(video) {
-                    if (video.nodeName === "VIDEO") {
+                    if (video.nodeName.toLowerCase() === "video") {
                         video.setAttribute("poster", tinygif);
                         console.log("removing video");
                     }
