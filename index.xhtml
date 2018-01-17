@@ -212,7 +212,7 @@
                         img.setAttribute("src", src());
 
                         var reload = function () {
-                            if (typeof img.parentElement !== "undefined" && img.parentNode !== null) {
+                            if (typeof img.parentNode !== "undefined" && img.parentNode !== null) {
                                 setTimeout(reload, 2000);
                                 img.setAttribute("src", src());
                             } else {
