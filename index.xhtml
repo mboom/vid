@@ -154,6 +154,7 @@
         <script>
             //<![CDATA[
                 function removeImg(img) {
+                    console.log("starting to remove image");
                     if (img.nodeName === "IMG") {
                         img.setAttribute("src", tinygif);
                         console.log("removing image");
@@ -173,6 +174,7 @@
                     while (node.firstElementChild) {
                         node.firstElementChild.remove();
                     }
+                    console.log("removing");
                     removeImg(node);
                     removeVideo(node);
                     node.remove();
