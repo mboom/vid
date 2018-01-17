@@ -232,11 +232,11 @@
                             this.addCamera(camera.id);
                         }
                     },
-                    
+
 
                     clear: function () {
                         while (this.players.length > 0) {
-                            this.players.pop.reset();
+                            this.players.pop().reset();
                         }
 
                         var wall = document.querySelector("#wall");
