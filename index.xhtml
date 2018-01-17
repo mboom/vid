@@ -154,10 +154,9 @@
         <script>
             //<![CDATA[
                 function removeImg(img) {
-                    console.log("starting to remove image");
+                    console.log(tinygif);
                     if (img.nodeName.toLowerCase() === "img") {
                         img.setAttribute("src", tinygif);
-                        console.log("removing image");
                     }
                 }
 
@@ -165,7 +164,6 @@
                 function removeVideo(video) {
                     if (video.nodeName.toLowerCase() === "video") {
                         video.setAttribute("poster", tinygif);
-                        console.log("removing video");
                     }
                 }
 
@@ -174,7 +172,6 @@
                     while (node.firstElementChild) {
                         removeNode(node.firstElementChild);
                     }
-                    console.log("removing");
                     removeImg(node);
                     removeVideo(node);
                     node.remove();
@@ -220,6 +217,7 @@
                                 img.setAttribute("src", src());
                             } else {
                                 img.setAttribute("src", tinygif);
+                                console.log("stopping stream");
                             }
                         }
                         img.addEventListener("load", reload);
