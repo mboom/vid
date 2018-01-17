@@ -151,6 +151,15 @@
           
         <script>
             //<![CDATA[
+                function removeNode(node) {
+                    while (node.firstElementChild) {
+                        node.firstElementChild.remove();
+                    }
+                    node.remove();
+                }
+
+
+
                 var cctv = {
                     addLive: function (src, description, poster) {
                         var video = document.createElement("video");
@@ -221,7 +230,7 @@
                     clear: function () {
                         var wall = document.querySelector("#wall");
                         while (wall.firstElementChild) {
-                            wall.firstElementChild.remove();
+                            removeNode(wall.firstElementChild);
                         }
                     }
                 };
