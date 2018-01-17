@@ -166,11 +166,8 @@
 
                     addLive: function (src, description, poster) {
                         var video = document.createElement("video");
-                        //video.setAttribute("autoplay", "autoplay");
                         video.setAttribute("class", "screen");
                         video.setAttribute("controls", "controls");
-                        //video.setAttribute("data-dashjs-player", "");
-                        //video.setAttribute("src", src);
 
                         if (typeof poster !== "undefined" && poster !== "") {
                             video.setAttribute("poster", poster);
@@ -196,11 +193,9 @@
                         img.setAttribute("src", src());
 
                         var reload = function () {
-                            if (typeof img.parentElement !== "undefined" && img.parentElement !== null) {
+                            if (typeof img.parentElement !== "undefined" && img.parentNode !== null) {
                                 setTimeout(reload, 2000);
                                 img.setAttribute("src", src());
-                            } else {
-                                console.log("stopped static stream");
                             }
                         }
                         img.addEventListener("load", reload);
@@ -240,14 +235,16 @@
 
 
                     clear: function () {
-                        while (this.players.length > 0) {
-                            this.players.pop().reset();
-                        }
-
                         var wall = document.querySelector("#wall");
                         while (wall.firstElementChild) {
                             removeNode(wall.firstElementChild);
                         }
+                        
+                        while (this.players.length > 0) {
+                            this.players.pop().reset();
+                        }
+
+                        componentHandler.downgradeElements(document.querySelector("#wall").childNodes);
                     }
                 };
             //]]>
