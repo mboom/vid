@@ -235,16 +235,17 @@
 
 
                     clear: function () {
-                        var wall = document.querySelector("#wall");
-                        while (wall.firstElementChild) {
-                            removeNode(wall.firstElementChild);
-                        }
-                        
+
                         while (this.players.length > 0) {
                             this.players.pop().reset();
                         }
 
                         componentHandler.downgradeElements(document.querySelector("#wall").childNodes);
+                        
+                        var wall = document.querySelector("#wall");
+                        while (wall.firstElementChild) {
+                            removeNode(wall.firstElementChild);
+                        }
                     }
                 };
             //]]>
