@@ -154,15 +154,17 @@
                 var cctv = {
                     addLive: function (src, description, poster) {
                         var video = document.createElement("video");
-                        video.setAttribute("autoplay", "autoplay");
+                        //video.setAttribute("autoplay", "autoplay");
                         video.setAttribute("class", "screen");
                         video.setAttribute("controls", "controls");
-                        video.setAttribute("data-dashjs-player", "");
-                        video.setAttribute("src", src);
+                        //video.setAttribute("data-dashjs-player", "");
+                        //video.setAttribute("src", src);
 
                         if (typeof poster !== "undefined" && poster !== "") {
                             video.setAttribute("poster", poster);
                         }
+
+                        dashjs.MediaPlayer().create().initialize(video, src, true);
 
                         var cell = document.createElement("div");
                         cell.setAttribute("class", "mdl-cell mdl-cell--4-col center");
