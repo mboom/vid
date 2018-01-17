@@ -177,6 +177,7 @@
                         }
 
                         var player = dashjs.MediaPlayer().create();
+                        player.getDebug().setLogToBrowserConsole(false);
                         player.initialize(video, src, true);
                         this.players.push(player);
 
@@ -195,8 +196,12 @@
                         img.setAttribute("src", src());
 
                         var reload = function () {
-                            setTimeout(reload, 2000);
-                            img.setAttribute("src", src());
+                            if (typeof img.parentElement !== "undefined" && img.parentElement !== null) {
+                                setTimeout(reload, 2000);
+                                img.setAttribute("src", src());
+                            } else {
+                                console.log("stopped static stream");
+                            }
                         }
                         img.addEventListener("load", reload);
 
