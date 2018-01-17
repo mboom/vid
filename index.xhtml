@@ -169,7 +169,7 @@
 
                 function removeNode(node) {
                     while (node.firstElementChild) {
-                        //removeNode(node.firstElementChild);
+                        removeNode(node.firstElementChild);
                     }
                     removeImg(node);
                     removeVideo(node);
