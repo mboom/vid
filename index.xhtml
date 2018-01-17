@@ -161,6 +161,9 @@
 
 
                 var cctv = {
+                    players: [],
+
+
                     addLive: function (src, description, poster) {
                         var video = document.createElement("video");
                         //video.setAttribute("autoplay", "autoplay");
@@ -173,7 +176,9 @@
                             video.setAttribute("poster", poster);
                         }
 
-                        dashjs.MediaPlayer().create().initialize(video, src, true);
+                        var player = dashjs.MediaPlayer().create();
+                        player.initialize(video, src, true);
+                        this.players.push(player);
 
                         var cell = document.createElement("div");
                         cell.setAttribute("class", "mdl-cell mdl-cell--4-col center");
@@ -221,13 +226,19 @@
                         }
                     },
 
+
                     addList: function (list) {
                         for (camera of list) {
                             this.addCamera(camera.id);
                         }
                     },
+                    
 
                     clear: function () {
+                        while (this.players.length > 0) {
+                            this.players.pop.reset();
+                        }
+
                         var wall = document.querySelector("#wall");
                         while (wall.firstElementChild) {
                             removeNode(wall.firstElementChild);
