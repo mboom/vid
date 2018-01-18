@@ -67,6 +67,27 @@ var providers = {
                     ]
                 }
             ]
+        },
+
+
+
+        {
+            "id": "ANWB B.V.",
+            "streams": [
+                {
+                    "name": "static",
+                    "sources": [
+                        {
+                            "protocol": "image",
+                            "format": "PNG",
+                            "location": function (cam) {
+                                return "https://anwb.nl/cameras/camerabeelden/camerabeeld?paramImageNaam="
+                                  + cam + "&refresh=" + Math.floor(Date.now() / 300000);
+                            }
+                        }
+                    ]
+                }
+            ]
         }
     ],
 
