@@ -219,6 +219,7 @@
                             if (typeof img.parentElement !== "undefined" && img.parentElement !== null) {
                                 setTimeout(reload, 2000);
                                 img.setAttribute("src", src());
+                                console.log("renewing screen");
                             } else {
                                 img.setAttribute("src", tinygif);
                                 console.log("stopping stream");
