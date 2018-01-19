@@ -286,7 +286,7 @@
                         for (let item of document.querySelectorAll("menu_item")) {
                             item.removeAttribute("data-mdl-disabled");
                         }
-                        option.setAttribute("data-mdl-disabled", "");
+                        document.querySelector(option).setAttribute("data-mdl-disabled", "");
                     }
                 };
 
