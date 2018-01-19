@@ -489,5 +489,183 @@
         "stream": "",
         "provider": "N.V. Nederlandse Apparatenfabriek Nedap",
         "manager": "Twente Mobiel"
+    },
+
+
+
+    {
+        "id": "Badhoevedorp",
+        "description": "A4/A9 Badhoevedorp",
+        "stream": "",
+        "provider": "ANWB B.V.",
+        "manager": "ANWB B.V."
+    },
+    {
+        "id": "Beekbergen",
+        "description": "A1/A50 Beekbergen",
+        "stream": "",
+        "provider": "ANWB B.V.",
+        "manager": "ANWB B.V."
+    },
+    {
+        "id": "Burgerveen",
+        "description": "A4/A44 Burgerveen",
+        "stream": "",
+        "provider": "ANWB B.V.",
+        "manager": "ANWB B.V."
+    },
+    {
+        "id": "Deil",
+        "description": "A2/A15 Deil",
+        "stream": "",
+        "provider": "ANWB B.V.",
+        "manager": "ANWB B.V."
+    },
+    {
+        "id": "DeNieuweMeer",
+        "description": "A10 De Nieuwe Meer",
+        "stream": "",
+        "provider": "ANWB B.V.",
+        "manager": "ANWB B.V."
+    },
+    {
+        "id": "Eemnes",
+        "description": "A1/A27 Eemnes",
+        "stream": "",
+        "provider": "ANWB B.V.",
+        "manager": "ANWB B.V."
+    },
+    {
+        "id": "Everdingen",
+        "description": "A2/A27 Everdingen",
+        "stream": "",
+        "provider": "ANWB B.V.",
+        "manager": "ANWB B.V."
+    },
+    {
+        "id": "Ewijk",
+        "description": "A50/A73 Ewijk",
+        "stream": "",
+        "provider": "ANWB B.V.",
+        "manager": "ANWB B.V."
+    },
+    {
+        "id": "Gorinchem",
+        "description": "A15/A27 Gorinchem",
+        "stream": "",
+        "provider": "ANWB B.V.",
+        "manager": "ANWB B.V."
+    },
+    {
+        "id": "Grijsoord",
+        "description": "A12/A50 Grijsoord",
+        "stream": "",
+        "provider": "ANWB B.V.",
+        "manager": "ANWB B.V."
+    },
+    {
+        "id": "Groningen",
+        "description": "A7 Groningen",
+        "stream": "",
+        "provider": "ANWB B.V.",
+        "manager": "ANWB B.V."
+    },
+    {
+        "id": "Hattemerbroek",
+        "description": "A28/A50 Hattemerbroek",
+        "stream": "",
+        "provider": "ANWB B.V.",
+        "manager": "ANWB B.V."
+    },
+    {
+        "id": "Hoevelaken",
+        "description": "A1/A28 Hoevelaken",
+        "stream": "",
+        "provider": "ANWB B.V.",
+        "manager": "ANWB B.V."
+    },
+    {
+        "id": "Holendrecht",
+        "description": "A2/A9 Holendrecht",
+        "stream": "",
+        "provider": "ANWB B.V.",
+        "manager": "ANWB B.V."
+    },
+    {
+        "id": "Kerensheide",
+        "description": "A2/A76 Kerensheide",
+        "stream": "",
+        "provider": "ANWB B.V.",
+        "manager": "ANWB B.V."
+    },
+    {
+        "id": "Kleinpolderplein",
+        "description": "A13/A20 Kleinpolderplein",
+        "stream": "",
+        "provider": "ANWB B.V.",
+        "manager": "ANWB B.V."
+    },
+    {
+        "id": "Lunetten",
+        "description": "A12/A27 Lunetten",
+        "stream": "",
+        "provider": "ANWB B.V.",
+        "manager": "ANWB B.V."
+    },
+    {
+        "id": "Maanderbroek",
+        "description": "A12/A30 Maanderbroek",
+        "stream": "",
+        "provider": "ANWB B.V.",
+        "manager": "ANWB B.V."
+    },
+    {
+        "id": "Oudenrijn",
+        "description": "A2/A12 Oudenrijn",
+        "stream": "",
+        "provider": "ANWB B.V.",
+        "manager": "ANWB B.V."
+    },
+    {
+        "id": "PrinsClausplein",
+        "description": "A4/A12 Prins Clausplein",
+        "stream": "",
+        "provider": "ANWB B.V.",
+        "manager": "ANWB B.V."
+    },
+    {
+        "id": "Ridderkerk",
+        "description": "A15/A16 Ridderkerk",
+        "stream": "",
+        "provider": "ANWB B.V.",
+        "manager": "ANWB B.V."
+    },
+    {
+        "id": "Rijnsweerd",
+        "description": "A27/A28 Rijnsweerd",
+        "stream": "",
+        "provider": "ANWB B.V.",
+        "manager": "ANWB B.V."
+    },
+    {
+        "id": "SchipholtunnelZuid",
+        "description": "A4 Schipholtunnel Zuid",
+        "stream": "",
+        "provider": "ANWB B.V.",
+        "manager": "ANWB B.V."
+    },
+    {
+        "id": "Terbregseplein",
+        "description": "A16/A20 Terbregseplein",
+        "stream": "",
+        "provider": "ANWB B.V.",
+        "manager": "ANWB B.V."
+    },
+    {
+        "id": "Waterberg",
+        "description": "A12/A50 Waterberg",
+        "stream": "",
+        "provider": "ANWB B.V.",
+        "manager": "ANWB B.V."
     }
 ]
