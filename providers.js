@@ -81,8 +81,9 @@ var providers = {
                             "protocol": "image",
                             "format": "PNG",
                             "location": function (cam) {
+                                /* Original policy: Math.floor(Date.now() / 300000);*/
                                 return "https://anwb.nl/cameras/camerabeelden/camerabeeld?paramImageNaam="
-                                  + cam + "&refresh=" + Math.floor(Date.now() / 300000);
+                                  + cam + "&refresh=" + Date.now();
                             }
                         }
                     ]
