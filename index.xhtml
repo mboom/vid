@@ -225,7 +225,6 @@
                                 console.log("stopping stream");
                             }
                         }
-                        img.addEventListener("load", reload);
 
                         var cell = document.createElement("div");
                         cell.setAttribute("class", "mdl-cell mdl-cell--4-col center");
@@ -233,6 +232,7 @@
                         cell.appendChild(img);
                         componentHandler.upgradeElement(cell);
                         document.querySelector("#wall").appendChild(cell);
+                        reload();
                     },
 
 
