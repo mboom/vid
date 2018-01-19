@@ -283,7 +283,7 @@
                     change: function (option) {
                         document.querySelector("#more-button").dispatchEvent(new Event("click"));
 
-                        for (let item of document.querySelectorAll("menu_item")) {
+                        for (let item of document.querySelectorAll(".menu_item")) {
                             item.removeAttribute("data-mdl-disabled");
                         }
                         document.querySelector(option).setAttribute("data-mdl-disabled", "");
