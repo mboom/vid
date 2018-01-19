@@ -40,9 +40,9 @@
                         <li class="mdl-menu__item menu_item menu_VID" onclick="loadVID;">VID Nederland B.V.</li>
                         <li class="mdl-menu__item menu_item menu_GRT" onclick="loadGRT();">Gemeente Rotterdam</li>
                         <li class="mdl-menu__item menu_item menu_TM" onclick="loadTM();">Twente Mobiel</li>
+                        <li class="mdl-menu__item menu_item menu_ANWB" onclick="loadANWB();">ANWB B.V.</li>
                         <li class="mdl-menu__item menu_item menu_ALL" onclick="loadALL();">Alles</li>
                         <li class="mdl-menu__item menu_item menu_CLR" data-mdl-disabled="" onclick="loadCLR();">Reset</li>
-                        <li class="mdl-menu__item menu_item menu_TST" onclick="loadTST();">Test</li>
                     </ul>
                 </div>
             </div>
@@ -156,7 +156,6 @@
             //<![CDATA[
                 function removeImg(img) {
                     if (img.nodeName.toLowerCase() === "img") {
-                        console.log("removing img element from DOM Tree");
                         img.setAttribute("src", tinygif);
                     }
                 }
@@ -164,16 +163,13 @@
 
                 function removeVideo(video) {
                     if (video.nodeName.toLowerCase() === "video") {
-                        console.log("removing video element from DOM Tree");
                         video.setAttribute("poster", tinygif);
                     }
                 }
 
 
                 function removeNode(node) {
-                    console.log("removing node from DOM Tree");
                     while (node.firstElementChild) {
-                        console.log("removing child node from DOM Tree");
                         removeNode(node.firstElementChild);
                     }
                     removeImg(node);
@@ -219,10 +215,6 @@
                             if (typeof img.parentElement !== "undefined" && img.parentElement !== null) {
                                 setTimeout(reload, 2000);
                                 img.setAttribute("src", src());
-                                console.log("renewing screen");
-                            } else {
-                                //img.setAttribute("src", tinygif);
-                                console.log("stopping stream");
                             }
                         }
 
@@ -262,8 +254,6 @@
 
 
                     clear: function () {
-                        console.log("starting to remove screens");
-                        console.log(tinygif);
                         while (this.players.length > 0) {
                             this.players.pop().reset();
                         }
@@ -272,7 +262,6 @@
                         
                         var wall = document.querySelector("#wall");
                         while (wall.firstElementChild) {
-                            console.log("removing screen");
                             removeNode(wall.firstElementChild);
                         }
                     }
@@ -318,6 +307,10 @@
                 function loadTM() {
                     screencontroller.load(".menu_TM", cameras.filter("manager", "Twente Mobiel"));
                 }
+
+                function loadANWB() {
+                    screencontroller.load(".menu_ANWB", cameras.filter("manager", "ANWB B.V."));
+                }
                 
                 function loadALL() {
                     screencontroller.load(".menu_ALL", cameras.list);
@@ -325,10 +318,6 @@
 
                 function loadCLR() {
                     screencontroller.load(".menu_CLR", []);
-                }
-
-                function loadTST() {
-                    screencontroller.load(".menu_TST", [ cameras.selectCamera("limburglaan") ]);
                 }
             //]]>
         </script>
